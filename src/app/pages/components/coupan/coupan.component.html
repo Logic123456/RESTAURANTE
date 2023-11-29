@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-title>Coupan Code </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close">Click Me</ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chef-box">
+    <div class="upper-box">
+      <form #coupanCodeForm="ngForm">
+        <h2>Add Coupan Code Below</h2>
+        <ion-item>
+          <ion-label position="floating">Code</ion-label>
+          <ion-input [(ngModel)]='coupanCode' name="code" required></ion-input>
+        </ion-item>
+
+        <div>
+          <ion-button expand="full" color="success" (click)="apply()" [disabled]="coupanCodeForm.invalid">
+            Apply
+          </ion-button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</ion-content>

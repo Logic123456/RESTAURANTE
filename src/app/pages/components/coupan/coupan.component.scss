@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+ion-content{
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+     .chef-box{
+        background: #fff;
+        height:auto !important;
+        min-height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding:20px;
+        .upper-box{
+            h2{
+                color:gray
+            }
+           
+
+            
+        }
+    }
+}

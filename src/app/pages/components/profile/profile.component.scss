@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+ion-content{
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+     .chef-box{
+        background: #fff;
+        height:auto !important;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding:20px;
+        .upper-box{
+       display:flex;
+            gap: 10px;
+            justify-content:space-between;
+            .img{
+                flex-grow: 1;
+                img{
+                    width:100px;
+                    height:100px;
+                    border-radius: 50%;
+                }
+            }
+            .name-text{
+                flex-grow: 4;
+                    margin-top:-5px;
+                    p{
+                        margin-top:-5px;
+                        color:#ccc;
+                        ion-icon{
+                            color:gold;
+                        }
+                        span{
+                            color:gold;
+                        }
+                    }
+                    h5{                  
+                        color:red;
+                    }
+    
+                    p:last-child{                  
+                        color:#000;
+                    }
+             
+                
+            }
+
+            .hour-text{
+                flex-grow: 1;
+                p{
+                    margin-top:10px;
+                    color:#ccc;
+                }
+            }
+        }
+
+        .lower-box{
+            .wrapper{
+                max-width: 731px;
+                border:none;
+                display: flex;
+                overflow-x: auto;
+
+                #img{
+                    width:100%;
+                    height:110px;
+                    border-radius: 10px;
+                }
+
+                .item{
+                    min-width: 110px;
+                    height:110px;
+                    line-height:110px;                    
+                    margin-right:10px;
+                }
+            }
+
+            .wrapper::--webkit-scrollbar{
+                width:0;
+            }
+        }
+        
+    }
+}

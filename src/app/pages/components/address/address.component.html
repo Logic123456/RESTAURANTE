@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Change / Add Address</ion-title>
+
+    <ion-icon name="add" slot="end" (click)="presentModal($event)"></ion-icon>
+    <img slot="end" src="../../../assets/001.JPG"  />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group mode="md" [value]="address.value" (ionChange)="addressChange($event)">
+
+      <ion-item *ngFor="let item of listOfAddress">
+        <ion-label >
+          <h3>{{item.line1}} <span ><ion-icon slot="end" name="trash-outline"></ion-icon></span></h3>
+          <p>{{item.line2}}</p>
+        </ion-label>
+        <ion-radio slot="start" [value]="item.value"></ion-radio>
+      </ion-item>
+
+     <!--  <ion-item>
+        <ion-label>
+          <h3>Home Address 2</h3>
+          <p>4073 Sundown Lane Austin, Texas, 78749</p>
+        </ion-label>
+        <ion-radio slot="start" value="home2"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h3>Home Address 3</h3>
+          <p>4073 Sundown Lane Austin, Texas, 78749</p>
+        </ion-label>
+        <ion-radio slot="start" value="home3"></ion-radio>
+      </ion-item> -->
+    </ion-radio-group>
+
+  </ion-list>
+ 
+
+  <div >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" (click)="setAddress()">Confirm</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+  </div>
+</ion-content>

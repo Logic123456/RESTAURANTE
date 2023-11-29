@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.main{
+    background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+    .upper-box{
+        background: #fff;
+        height:auto;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding:10px;
+        margin-bottom:10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        .thank-you{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            ion-icon{
+                font-size: 80px;
+                color:#33d27b;
+                text-align: center;
+                margin-top:-10px;
+            }
+        }
+        #thank{
+            text-align: center;
+            margin-top:-3px;
+            font-weight: bold;
+        }
+        #request{
+            text-align: center;
+            margin-top:-3px;
+            font-weight: bold;  
+            color:gray;
+        }
+
+        .booking-date{
+            padding:10px;
+            display: grid; 
+           
+            grid-template-columns: 50% 50%; 
+            grid-template-rows: 1fr 1fr; 
+           
+            grid-template-areas: 
+              "date time"
+              "print-date print-time"; 
+              .date { 
+                  grid-area: date;
+                  justify-self: start;
+                  color:gray;
+                 }
+            .time { 
+                grid-area: time;
+                justify-self: end;
+                color:gray;
+             }
+            .print-date { 
+                grid-area: print-date;
+                justify-self: start;
+                margin-top:-20px;
+             }
+            .print-time { 
+                grid-area: print-time;
+                justify-self: end;
+                margin-top:-20px;
+             }
+        }
+
+
+        .chef-name{
+            padding:20px;
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 60% 40%; 
+            grid-template-rows: 1fr 1fr 1fr; 
+            grid-template-areas: 
+                "name image"
+                "title image"
+                "city image";
+
+                .name { 
+                    grid-area: name;
+                    color:gray;
+                 }
+                .title { 
+                    grid-area: title;
+                    font-size: 18px;
+                 }
+                .city { 
+                    grid-area: city;
+                    color:gray;
+                 }
+                .image { 
+                    grid-area: image;
+                    justify-self: end;
+                    img{
+                        width:80px;
+                        height:80px;
+                        border-radius: 50%;
+                    }
+                 }
+        }
+    }
+}

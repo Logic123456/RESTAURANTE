@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ion-content {
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+    .toolbar-notification{
+        background: #f9f9f9;
+        height:88px;
+        display: flex;
+        font-size: 24px;
+        padding-top:50px;
+        justify-content: center;
+        gap:20px;
+        .close{
+            color:red;
+            margin-left:20px;
+            flex-grow: 1
+        }
+
+        .notification{
+            color:#000;
+            flex-grow: 3
+        }
+    }
+
+    .note{
+        background:#ffffff;
+        height:auto;
+        margin:15px ;
+        padding:20px;
+        border-radius: 10px;               
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 25% 75% 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "icon order time"
+          "icon desc desc"
+          ". . .";
+        .icon{            
+            background:#f15b3a;
+            width:50px;
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            flex-grow: 2;
+            margin-right:20px;
+            grid-area: icon;
+            justify-self:center;
+            align-self:center;
+            ion-icon{
+                font-size: 24px;
+                color:#fff;
+            }
+        } 
+          #desc { 
+              grid-area: desc;
+              justify-self: start; 
+              text-align: justify;
+             color:gray;
+            }
+          
+          #order { 
+              grid-area: order; 
+              justify-self: start;
+              align-self:start;
+              color:#f15b3a;
+              font-weight: bold;
+            }
+          
+          #time { 
+              grid-area: time; 
+              justify-self: end;
+              color:#ccc;
+              align-self:start;
+            }
+          
+
+        
+    }
+    
+}

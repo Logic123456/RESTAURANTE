@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Book A Chef</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="chef-box">
+    <div class="upper-box">
+      <div class="img">
+        <img src="../../../assets/001.JPG" />
+      </div>
+      <div class="name-text">
+
+        <h5>Patricia Luke</h5>
+        <p>Houston, Texas</p>
+        <p>
+          <ion-icon name="star"></ion-icon> <span>4.0</span> ( 208 Reviews )
+        </p>
+
+
+      </div>
+      <div class="hour-text">
+        <p class="ion-text-end">1.0KM </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="available-time">
+    <p id="timePara">Check Available Time</p>
+    <ion-segment [value]="segId" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="today">
+        <ion-label>Today</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="forever">
+        <ion-label>Forever</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calender">
+        <ion-label>Calender</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="segId == 'today'">
+      <ion-list>
+        <ion-radio-group (ionChange)="todayChange($event)" [value]="availableType.today">
+          <ion-item>
+            <ion-label>Whole Day <span>( 12 Hours ) <ion-icon name="ellipse-outline" slot="end"></ion-icon></span>
+            </ion-label>
+            <ion-radio slot="start" value="wholeday"></ion-radio>
+            <ion-label id="lbl" slot="end">$50.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Morning <span>( 12 Hours ) <ion-icon name="partly-sunny-outline" slot="end"></ion-icon></span>
+            </ion-label>
+            <ion-radio slot="start" value="morning"></ion-radio>
+            <ion-label id="lbl" slot="end">$50.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Afternoon <span>( 12 Hours ) <ion-icon name="sunny-outline" slot="end"></ion-icon></span>
+            </ion-label>
+            <ion-radio slot="start" value="afternoon"></ion-radio>
+            <ion-label id="lbl" slot="end">$50.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Evening <span>( 12 Hours ) <ion-icon name="moon-outline" slot="end"></ion-icon></span>
+            </ion-label>
+            <ion-radio slot="start" value="evening"></ion-radio>
+            <ion-label id="lbl" slot="end">$50.00 </ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+
+    <div *ngIf="segId == 'forever'">
+      <ion-list>
+        <ion-radio-group (ionChange)="foreverChange($event)" [value]="availableType.forever">
+          <ion-item>
+            <ion-label>Monthly <span>( 8 Hours / day ) </span>
+            </ion-label>
+            <ion-radio slot="start" value="monthly"></ion-radio>
+            <ion-label id="lbl" slot="end">$200.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Quarterly <span>( 8 Hours / day ) </span>
+            </ion-label>
+            <ion-radio slot="start" value="quarterly"></ion-radio>
+            <ion-label id="lbl" slot="end">$500.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Half Year <span>( 8 Hours / day ) </span>
+            </ion-label>
+            <ion-radio slot="start" value="halfyear"></ion-radio>
+            <ion-label id="lbl" slot="end">$800.00 </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Yearly <span>( 8 Hours / day ) </span></ion-label>
+            <ion-radio slot="start" value="yearly"></ion-radio>
+            <ion-label id="lbl" slot="end">$1000.00 </ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+
+    <div *ngIf="segId == 'calender'" style="margin-top:10px;">
+      <ion-datetime #popoverDatetime mode="ios" presentation="date-time" size="cover" show-default-time-label="true"
+        (ionChange)="dateValue = formatDate(popoverDatetime.value)" minuteValues="0,15,30,45"></ion-datetime>
+    </div>
+  </div>
+  <div class="available-time">
+    <div *ngIf="segId == 'today'">
+      <p id="selectedPara">You have selected <b style="color:red;">'{{availableType.today | uppercase}}'</b> Time</p>
+    </div>
+
+    <div *ngIf="segId == 'forever'">
+      <p id="selectedPara">You have selected <b style="color:red;">'{{availableType.forever | uppercase}}'</b> Plan</p>
+    </div>
+
+    <div *ngIf="segId == 'calender'">
+      <p id="selectedPara">You have selected <b style="color:red;">
+          '{{availableType.calendar }}'</b> Date</p>
+    </div>
+  </div>
+
+  <div class="available-time">
+    <ion-button expand="block" (click)="contiune()">Continue</ion-button>
+  </div>
+
+
+</ion-content>

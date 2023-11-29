@@ -1,0 +1,185 @@
+
+        
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap');
+    ion-header {
+        font-family: 'Poppins', sans-serif;
+        ion-icon {
+            font-size: 30px;
+            position: relative;
+            margin-right: 10px;
+        }
+    #notifications-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 50px;
+        color: #fff;
+        z-index: 111;
+    }
+    #notifications-badge-msg {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 95px;
+        color: #fff;
+        z-index: 111;
+    }
+    img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 10px;
+        }
+    }
+        
+        ion-content {
+            --background: #f0f0f2;
+            font-family: 'Poppins', sans-serif;
+            .upperBox {
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                height: auto;
+                margin-top: -15px;
+                overflow-x: hidden;
+                ::-webkit-scrollbar {
+                    display: none;
+                }
+                .light{
+                    background: #0d0f03;
+                    font-family: 'Corinthia', cursive;
+                    h4 {
+                        padding: 10px 10px 0px 10px;
+                        font-weight: bold;
+                        color: #0e3742;
+                        -webkit-box-reflect: below -42px linear-gradient(transparent, #0004);
+                        text-align: center;
+                        padding:5px;
+                        font-size: 30px;
+                    }
+                    h4 span {
+                        animation: animate 5s linear infinite;
+                    }
+                    h4 span:nth-child(even) {
+                        animation-delay: 0.4s;
+                    }
+                    @keyframes animate {
+
+                        0%,
+                        18%,
+                        20%,
+                        50.1%,
+                        60%,
+                        65.1%,
+                        80%,
+                        90.1%,
+                        92% {
+                            color: #0e3742;
+                            text-shadow: none;
+                        }
+            
+                        18.1%,
+                        20.1%,
+                        30%,
+                        50%,
+                        60.1%,
+                        65%,
+                        80.1%,
+                        90%,
+                        92.1%,
+                        100% {
+                            color: #fff;
+                            text-shadow: 0 0 10px #e70a2f,
+                                0 0 20px #e70a2f,
+                                0 0 40px #e70a2f,
+                                0 0 80px #e70a2f,
+                                0 0 160px #e70a2f,
+                                0 0 4000px #e70a2f;
+                        }
+                    }
+                    
+                }
+                
+                .wrapper {
+                    max-width: 731px;
+                    border: none;
+                    display: flex;
+                    overflow-x: auto;
+                    padding: 10px;
+                    .item {
+                        min-width: 100px;
+                        height: auto;
+                        position: relative;
+                        #img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            display: block;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+                        .online {
+                            background: green;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 55px;
+                            right: 10px
+                        }
+                        p {
+                            margin-top: 0px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .wrapper::--webkit-scrollbar {
+                    width: 0;
+                }
+            }
+
+            .lowerBox{
+
+                .box{
+                    height: auto;
+                width: 100%;
+                background-color: #fff;
+                margin-top:10px;
+                padding:5px;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                display: grid; 
+                    grid-auto-columns: 1fr; 
+                    grid-template-columns: 30% 50% 20%; 
+                    grid-template-rows: 25% 75%; 
+                    gap: 1px 1px; 
+                    grid-template-areas: 
+                        "image name time"
+                        "image msg msg";
+
+                        .image { 
+                            grid-area: image;
+                            justify-self: center;
+                            align-self: center; 
+                            img{
+                                border-radius: 50%;
+                                width:80px;
+                                height:80px;
+                            }
+                        }
+                        .name { grid-area: name; }
+                        .time {
+                             grid-area: time; 
+                             color:#ccc;
+                             h4{
+                                font-size: 10px;
+                             }
+                            
+                            }
+                        .msg { 
+                            grid-area: msg;
+                            color:gray;
+                        }
+                }
+                
+            }
+        }

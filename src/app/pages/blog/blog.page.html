@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Blog</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="blog" *ngFor='let blog of blogs' (click)="goToBlog(blog.id)">
+    <div class="img">
+      <img src="../../../assets/food/{{blog.image}}" />
+    </div>
+    <div class="title">
+      <h3>{{blog.title}}</h3>
+      <p>{{blog.category}} <span>Date : {{blog.date}}</span></p>
+    </div>
+  </div>
+
+ 
+  
+
+</ion-content>

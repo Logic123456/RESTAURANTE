@@ -1,0 +1,189 @@
+<ion-header>
+    <ion-toolbar color='danger'>
+        <ion-buttons slot="start" class="menu_btn">
+            <ion-back-button color="light" defaultHref="search-chef"></ion-back-button>
+        </ion-buttons>
+        <ion-title>My favourites</ion-title>
+        <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+        <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+        <ion-icon name="cart" slot="end"></ion-icon>
+        <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+        <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="top">
+        <ion-segment [value]="segId" (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="chef">
+                <ion-label>Chef</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="menu">
+                <ion-label>Menu's</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+
+    <div *ngIf="segId == 'chef'">
+        <div class="chef-box">
+            <div class="upper-box">
+                <div class="img">
+                    <img src="../../../assets/001.JPG" />
+                </div>
+                <div class="name-text">
+
+                    <h5>Patricia Luke</h5>
+                    <p>Houston, Texas</p>
+                    <p>
+                        <ion-icon name="star"></ion-icon> <span>4.0</span> (208 Reviews)
+                    </p>
+                    <p>08:30 AM - 09:00 PM</p>
+
+
+                </div>
+
+                <div class="hour-text">
+                    <p class="ion-text-end">1.0KM <ion-icon color="danger" name="ellipsis-vertical-outline"
+                            (click)="presentPopover($event)"></ion-icon>
+                    </p>
+                    <h5 class="ion-text-end">$20/Hour </h5>
+                    <ion-button color="danger" (click)="goToEvent()">Book</ion-button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chef-box">
+            <div class="upper-box">
+                <div class="img">
+                    <img src="../../../assets/002.JPG" />
+                </div>
+                <div class="name-text">
+
+                    <h5>Patricia Luke</h5>
+                    <p>Houston, Texas</p>
+                    <p>
+                        <ion-icon name="star"></ion-icon> <span>4.0</span> (208 Reviews)
+                    </p>
+                    <p>08:30 AM - 09:00 PM</p>
+
+
+                </div>
+
+                <div class="hour-text">
+                    <p class="ion-text-end">1.0KM <ion-icon color="danger" name="ellipsis-vertical-outline"
+                            (click)="presentPopover($event)"></ion-icon>
+                    </p>
+                    <h5 class="ion-text-end">$20/Hour </h5>
+                    <ion-button color="danger" (click)="goToEvent()">Book</ion-button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chef-box">
+            <div class="upper-box">
+                <div class="img">
+                    <img src="../../../assets/003.JPG" />
+                </div>
+                <div class="name-text">
+
+                    <h5>Patricia Luke</h5>
+                    <p>Houston, Texas</p>
+                    <p>
+                        <ion-icon name="star"></ion-icon> <span>4.0</span> (208 Reviews)
+                    </p>
+                    <p>08:30 AM - 09:00 PM</p>
+
+
+                </div>
+
+                <div class="hour-text">
+                    <p class="ion-text-end">1.0KM <ion-icon color="danger" name="ellipsis-vertical-outline"
+                            (click)="presentPopover($event)"></ion-icon>
+                    </p>
+                    <h5 class="ion-text-end">$20/Hour </h5>
+                    <ion-button color="danger" (click)="goToEvent()">Book</ion-button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="chef-box">
+            <div class="upper-box">
+                <div class="img">
+                    <img src="../../../assets/002.JPG" />
+                </div>
+                <div class="name-text">
+
+                    <h5>Patricia Luke</h5>
+                    <p>Houston, Texas</p>
+                    <p>
+                        <ion-icon name="star"></ion-icon> <span>4.0</span> (208 Reviews)
+                    </p>
+                    <p>08:30 AM - 09:00 PM</p>
+
+
+                </div>
+
+                <div class="hour-text">
+                    <p class="ion-text-end">1.0KM <ion-icon color="danger" name="ellipsis-vertical-outline"
+                            (click)="presentPopover($event)"></ion-icon>
+                    </p>
+                    <h5 class="ion-text-end">$20/Hour </h5>
+                    <ion-button color="danger" (click)="goToEvent()">Book</ion-button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div *ngIf="segId == 'menu'">
+        <ion-item-sliding *ngFor="let order of orders">
+            <ion-item>
+                <div class="upperBox">
+                    <div class="image">
+                        <img src="../../../assets/food/{{order.image}}" />
+                    </div>
+                    <div class="title">
+                        <h3>{{order.title}}</h3>
+                    </div>
+                    <div class="menu">
+                        <h3>
+                            <ion-icon name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon>
+                        </h3>
+                    </div>
+                    <div class="orderId">
+                        <p>category or item description</p>
+                    </div>
+                    <div class="amount">
+                        <h3>${{order.amount}}</h3>
+                    </div>
+
+                    <div class="time">
+                        <p>Est. Time : {{order.time}}</p>
+                    </div>
+                    <div class="edit">
+                        <button class="btn" type="submit"> Add</button>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option color="danger" (click)="delete(order.id)">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </div>
+
+
+
+</ion-content>

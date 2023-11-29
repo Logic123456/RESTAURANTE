@@ -1,0 +1,84 @@
+{
+    "status": "success",
+    "code": 1,
+    "message": "questions found",
+    "document": {
+        "pageno": 1,
+        "pagesize": 10,
+        "total_count": "10",
+        "records": [
+            {
+                "event_id": "1",
+                "title": "Children’s Day 2021",
+                "description": "The celebrations began with prayers to the Almighty to thank Him for all the children in the world and seek His blessings for all. It turned out to be a very special day for the students as they got an opportunity to see their teachers in different roles. They enjoyed watching the teachers perform a humorous skit and sing some melodious songs. A special song and poem presentation by the members of the Student Council added to the festivities.",
+                "startTime": "Fri, 05 Nov 2021 03:15:19 +0500",
+                "endTime": "Fri, 05 Nov 2021 08:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "2",
+                "title": "Independence Day Celebrations 2021",
+                "description": "Students delivered speeches on varied topics like the history of freedom struggle, the contribution of our unsung heroes and India’s development over the years. A few students drew a parallel between India’s freedom struggle and the challenges our country is facing due to the pandemic. They also appreciated the hard work put in by the frontline health care workers.",
+                "startTime": "Fri, 05 Nov 2021 03:15:19 +0500",
+                "endTime": "Fri, 05 Nov 2021 08:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "3",
+                "title": "Somerville Alumni Reunion 2019",
+                "description": "The programme began with a school morning assembly, followed by songs, dances and reminiscences shared by several former students and some of the teachers of the school. The alumni shared how the values of compassion and discipline they learnt in school had stayed with them as they made their place in the world as scientists, bureaucrats, filmmakers, writers and leaders of people.",
+                "startTime": "Mon, 08 Nov 2021 03:15:19 +0500",
+                "endTime": "Mon, 08 Nov 2021 10:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "4",
+                "title": "PUPPETRY ARTS by MR. DADI ",
+                "description": "During the hour-long programme, Mr Pudumjee and his aides demonstrated the power of the willing suspension of disbelief when they seemed to breathe life into ordinary objects such as bags, shoes and slippers and encouraged the audience develop their own stories about the characters they could imagine.",
+                "startTime": "Wed, 10 Nov 2021 05:15:19 +0500",
+                "endTime": "Wed, 10 Nov 2021 15:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "5",
+                "title": "Investiture Ceremony  (2019-2020)",
+                "description": "One of our most senior teachers, Mr. Devendra, PGT Commerce, retired from service on 30th April 2019 after a long and distinguished tenure of almost 30 years in the school. He was bid a warm farewell at a special programme organised for him by the students and teachers. The Principal, teachers, students and former students paid glowing tributes to his dedication to teaching and his versatile talents. His colleagues spoke highly of Mr. Devendra’s interests in diverse fields, particularly his contrasting accomplishments as an artist and an accountant. Former student, Ms. Prerna Jain (Session………….) recalled the interest Mr. Devendra could infuse in his lectures by relating topics to real- life situations.",
+                "startTime": "Fri, 12 Nov 2021 15:15:19 +0500",
+                "endTime": "Fri, 12 Nov 2021 18:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "6",
+                "title": "Farewell Ceremony – Mr Devendra",
+                "description": "One of our most senior teachers, Mr. Devendra, PGT Commerce, retired from service on 30th April 2019 after a long and distinguished tenure of almost 30 years in the school. He was bid a warm farewell at a special programme organised for him by the students and teachers. The Principal, teachers, students and former students paid glowing tributes to his dedication to teaching and his versatile talents. His colleagues spoke highly of Mr. Devendra’s interests in diverse fields, particularly his contrasting accomplishments as an artist and an accountant. Former student, Ms. Prerna Jain (Session………….) recalled the interest Mr. Devendra could infuse in his lectures by relating topics to real- life situations.",
+                "startTime": "Sun, 14 Nov 2021 01:15:19 +0500",
+                "endTime": "Sun, 14 Nov 2021 09:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "7",
+                "title": "The Annual Day of Somerville",
+                "description": "The occasion was graced by the honourable members of the Board of Management; Mrs. Mary George, President of the Lott Carey Baptist Mission in India, Mr. Thomas T. Roy, the Secretary/ Treasurer of the LCBM in India, Mrs. D.A.Tressler, the Chairperson & Director, Somerville Schools, Mr. Abraham Mathew, the Manager of the school, members of the Managing Committee, parents and well-wishers.",
+                "startTime": "Mon, 15 Nov 2021 03:15:19 +0500",
+                "endTime": "Mon, 15 Nov 2021 10:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "8",
+                "title": "SPIC MACAY VIRASAT 2018",
+                "description": "Somerville School, Vasundhara Enclave, Delhi and SPIC MACAY were privileged to organise Mohan Veena lecture demonstration by the acclaimed Mohan Veena (slide guitar) player and Grammy Award winner Padma Bhushan Pandit Vishwa Mohan Bhatt on 26th October 2018.",
+                "startTime": "Thu, 18 Nov 2021 05:15:19 +0500",
+                "endTime": "Thu, 18 Nov 2021 12:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            },
+            {
+                "event_id": "9",
+                "title": "CBSE CENTRAL ZONE GIRLS’ ",
+                "description": "Somerville School, Vasundhara Enclave, Delhi hosted the CBSE Inter School Girls Football Tournament, Central Zone, Delhi region. The school was a hub of activities from 1st October 2018 to 6th October 2018 with cluster matches scheduled in Under 19 and Under 17 categories for girls. The meet was declared open by Mr. J.K.Yadav, Regional Officer, CBSE, Delhi.",
+                "startTime": "Tue, 23 Nov 2021 12:15:19 +0500",
+                "endTime": "Tue, 23 Nov 2021 18:15:19 +0500",
+                "img": "https://picsum.photos/200"
+            }
+        ]
+    }
+}

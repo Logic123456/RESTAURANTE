@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color='danger'>
+        <ion-buttons slot="start" class="menu_btn">
+            <ion-back-button color="light" defaultHref="search-chef"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Messages</ion-title>
+        <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+        <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+        <ion-icon name="cart" slot="end"></ion-icon>
+        <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+        <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="upperBox">
+        <div class="light">
+            <h4>
+                <span>Chef's </span> &nbsp;
+                <span>Online</span>&nbsp;
+
+            </h4>
+        </div>
+        <div class="wrapper">
+            <div class="item" *ngFor="let item of user">
+                <img id="img" src="../../../assets/{{item.image}}" />
+                <p>{{item.name | slice:0:8 }}</p>
+                <div class="online"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lowerBox">
+
+        <div class="box" *ngFor="let item of user">
+            <div class="image">
+                <img src="../../../assets/{{item.image}}" />
+            </div>
+            <div class="name">
+                <h5>{{item.name}}</h5>
+            </div>
+            <div class="time">
+                <h5>{{item.onlineTime}}</h5>
+            </div>
+            <div class="msg">
+                <p>{{item.msg}}</p>
+            </div>
+        </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end"  slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-fab-button>
+       
+      </ion-fab>
+    
+</ion-content>

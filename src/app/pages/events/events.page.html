@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Book Chef</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+    
+      <ion-button color="light" (click)="today()">Today</ion-button>
+      <ion-button color="light" (click)="changeMode('month')">Month</ion-button>
+      <ion-button color="light" (click)="changeMode('week')">Week</ion-button>
+      <ion-button color="light" (click)="changeMode('day')">Day</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="showAddEvent" class="ion-padding">
+    <ion-item>
+      <ion-label color="danger"><b>Title:</b></ion-label>
+      <ion-input type="text" placeholder="Title" [(ngModel)]="newEvent.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="danger"><b>Description:</b></ion-label>
+      <ion-input type="text" placeholder="Description" [(ngModel)]="newEvent.description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="danger"><b>Image:</b></ion-label>
+      <ion-input type="text" placeholder="Image" [(ngModel)]="newEvent.img"></ion-input>
+    </ion-item>
+
+    <ion-item (click)="showPicker1 = ! showPicker1">
+      <ion-label color="danger"><b>Select Start Date</b></ion-label>
+      <ion-text slot="end">{{formattedString1}}</ion-text>
+    </ion-item>
+
+    <ion-item *ngIf="showPicker1">
+      <ion-datetime 
+      [value]="dateValue1" 
+      #dateTime1
+      size="cover"     
+      (ionChange)="dateChanged1(dateTime1.value)"
+      showDefaultButtons = "true"
+      (ionCancel)="showPicker1 = false;"    
+      >
+      </ion-datetime>
+    </ion-item>
+
+
+    <ion-item (click)="showPicker2 = ! showPicker2">
+      <ion-label color="danger"><b>Select End Date</b></ion-label>
+      <ion-text slot="end">{{formattedString2}}</ion-text>
+    </ion-item>
+
+    <ion-item *ngIf="showPicker2">
+      <ion-datetime 
+      [value]="dateValue2" 
+      #dateTime2
+      size="cover"     
+      (ionChange)="dateChanged2(dateTime2.value)"
+      showDefaultButtons = "true"
+      (ionCancel)="showPicker2 = false;"    
+      >
+      </ion-datetime>
+    </ion-item>
+
+
+    <ion-button color="danger" expand="block" (click)="addEvent()">Add Event</ion-button>
+  </div>
+
+
+  <ion-row *ngIf="!showAddEvent">
+    <!-- Move back one screen of the slides -->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="8" class="ion-text-center">
+      <h2>{{ currentMonth }}</h2>
+    </ion-col>
+
+    <!-- Move forward one screen of the slides -->
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <calendar id="myCal " *ngIf="!showAddEvent" [eventSource]="allEvents" [calendarMode]="calendar.mode" startHour="0"
+    noEventsLabel="There is no Event to Dispaly" endHour="23" step="30" startingDayWeek="1"
+    [currentDate]="calendar.currentDate" (onTitleChanged)="onViewTitleChanged($event)"
+    (onEventSelected)="onEventSelected($event)" [timeInterval]="30">
+  </calendar>
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showHideForm()">
+      <ion-icon *ngIf="!showAddEvent" name="add"></ion-icon>
+      <ion-icon *ngIf="showAddEvent" name="close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="upper">
+    <div class="icon">
+      <ion-icon name="restaurant"></ion-icon>
+    </div>
+    <p id="login">RESTAURANTE</p>
+  </div>
+  <div class="middle">
+    <div class="box">
+      <form #loginForm="ngForm">
+        <h3>Verify Phone Number</h3><hr>
+        <p>We have sent you 4 digit code to verify
+          you phone number</p>
+        <ion-item>
+          <ion-label position="floating">Mobile</ion-label>
+          <ion-input type="number" placeholder="Mobile" name="mobile" #mobile="ngModel" [(ngModel)]="login.mobile"
+          required ></ion-input>
+          <ion-icon class="ion-align-self-center" slot="end" name="call"></ion-icon>
+
+        </ion-item>
+        <div *ngIf="mobile.invalid && mobile.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px;">Please Write Mobile Number</h4>
+          </ion-text>
+        </div>
+
+        <div class="btn">
+          <ion-button (click)="resetPassword()" [disabled]="loginForm.invalid">Verify Number</ion-button>
+        </div>
+      </form>
+    
+     
+     
+      
+    </div>
+  </div>
+  <div class="navigator">
+    <p (click)="goToHome()">Skip & Go To Home Page</p>
+  </div>
+
+
+
+</ion-content>

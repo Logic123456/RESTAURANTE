@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>FAQs & Help</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="upperBox">
+    <h2 class="heading">How can we help you?</h2>
+    <p class="subheading">You’ve got a trouble. Don’t worry, we here to help.</p>
+    <h2 class="faq">FAQs</h2>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="tabs">
+        <div class="tab">
+          <input type="radio" id="rd1" name="rd">
+          <label class="tab-label" for="rd1">How to book Chef’s and Dishes?</label>
+          <div class="tab-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+          </div>
+        </div>
+        <div class="tab">
+          <input type="radio" id="rd2" name="rd">
+          <label class="tab-label" for="rd2">How can customize my preferences? </label>
+          <div class="tab-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+          </div>
+        </div>
+
+        <div class="tab">
+          <input type="radio" id="rd4" name="rd">
+          <label class="tab-label" for="rd4">How to add payment methods ? </label>
+          <div class="tab-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+          </div>
+        </div>
+
+        <div class="tab">
+          <input type="radio" id="rd5" name="rd">
+          <label class="tab-label" for="rd5">How can I get refund? </label>
+          <div class="tab-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+          </div>
+        </div>
+
+        <div class="tab">
+          <input type="radio" id="rd6" name="rd">
+          <label class="tab-label" for="rd6">How to check my payment history? </label>
+          <div class="tab-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+          </div>
+        </div>
+        <div class="tab">
+          <input type="radio" id="rd3" name="rd">
+          <label for="rd3" class="tab-close">Close others &times;</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="upperBox">
+    <h2 class="msg">Message</h2>
+    <ion-item>
+      <ion-textarea mode='ios' placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+    <div class="btn">
+      <ion-button expand="block">Send Message</ion-button>
+    </div>
+  </div>
+</ion-content>

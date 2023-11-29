@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+ion-header{
+  font-family: 'Poppins', sans-serif;
+    ion-icon{
+        font-size:30px;
+        position: relative; 
+        margin-right:10px; 
+    }
+    #notifications-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:50px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+
+    #notifications-badge-msg{
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:95px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+    img{
+        width: 35px;
+        height:35px;
+        border-radius: 50%;
+        margin-right:10px;
+    }
+}
+
+
+
+
+ion-content{
+    --background: #fff;
+    font-family: 'Poppins', sans-serif;
+    .header{
+        padding:10px;
+        margin:10px;
+        background: #f0f0f0;
+        h3{
+            color:red;
+            text-align: center;
+        }
+        p{
+            text-align: center;  
+        }
+        ion-button{
+            --background:#f15b3a;
+        }
+    }
+    .header1{
+        padding:10px;
+        margin:10px;
+        ion-button{
+            --background:#f15b3a;
+        }
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        .option_item {
+            display: block;
+            position: relative;
+            width: 44%;
+            height: 175px;
+            margin: 10px;
+              .checkbox {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+              }
+
+              .checkbox:checked ~ .option_inner .tickmark {
+                display: block;
+              }
+              .option_inner.facebook .tickmark {
+                border-color: #3b5999 transparent transparent #3b5999;
+              }
+
+              option_inner.twitter .tickmark {
+                border-color: #55acee transparent transparent #55acee;
+              }
+              .option_inner.instagram .tickmark {
+                border-color: #e4405f transparent transparent #e4405f;
+              }
+              .option_inner.linkedin .tickmark {
+                border-color: #0077b5 transparent transparent #0077b5;
+              }
+              .option_inner.whatsapp .tickmark {
+                border-color: #25d366 transparent transparent #25d366;
+              }
+              .option_inner.google .tickmark {
+                border-color: #dd4b39 transparent transparent #dd4b39;
+              }
+              .option_inner.reddit .tickmark {
+                border-color: #ff5700 transparent transparent #ff5700;
+              }
+              .option_inner.quora .tickmark {
+                border-color: #b92b27 transparent transparent #b92b27;
+              }
+
+              .option_inner {
+                width: 100%;
+                height: 100%;
+                background: #f0f0f0;
+                border-radius: 5px;
+                text-align: center;
+                padding: 58px 40px;
+                cursor: pointer;
+                color: #585c68;
+                display: block;
+                border: 5px solid transparent;
+                position: relative;
+                .icon {
+                    margin-bottom: 10px;
+                    .fab {
+                        font-size: 32px;
+                      }
+                  }
+                .name {
+                user-select: none;
+                font-size: 18px;
+                }
+                .tickmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border: 20px solid;
+                    border-color: #000 transparent transparent #000;
+                    display: none;
+                  }
+                  .tickmark:before {
+                    content: "";
+                    position: absolute;
+                    top: -18px;
+                    left: -18px;
+                    width: 15px;
+                    height: 5px;
+                    border: 3px solid;
+                    border-color: transparent transparent #fff #fff;
+                    transform: rotate(-45deg);
+                  }
+              }
+
+              .checkbox:checked ~ .option_inner.facebook {
+                border-color: #3b5999;
+                color: #3b5999;
+              }
+              .checkbox:checked ~ .option_inner.twitter {
+                border-color: #55acee;
+                color: #55acee;
+              }
+              .checkbox:checked ~ .option_inner.instagram {
+                border-color: #e4405f;
+                color: #e4405f;
+              }
+              .checkbox:checked ~ .option_inner.linkedin {
+                border-color: #0077b5;
+                color: #0077b5;
+              }
+              .checkbox:checked ~ .option_inner.whatsapp {
+                border-color: #25d366;
+                color: #25d366;
+              }
+              .checkbox:checked ~ .option_inner.google {
+                border-color: #dd4b39;
+                color: #dd4b39;
+              }
+              .checkbox:checked ~ .option_inner.reddit {
+                border-color: #ff5700;
+                color: #ff5700;
+              }
+              .checkbox:checked ~ .option_inner.quora {
+                border-color: #b92b27;
+                color: #b92b27;
+              }
+              
+          }
+      }
+}

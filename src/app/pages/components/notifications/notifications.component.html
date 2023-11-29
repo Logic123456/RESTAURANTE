@@ -1,0 +1,18 @@
+<ion-content>
+  <div class="toolbar-notification">
+    <div class="close" (click)="dismiss()">Close</div>
+    <div class="notification">Notifications</div>
+  </div>
+
+  <div class="note" *ngFor="let item of notifications">
+    <div class="icon">
+      <ion-icon name="{{item?.icon}}"></ion-icon>
+    </div>
+    <p id="order">{{item?.title}}</p>
+    <p id="time">{{item?.time}}</p>
+
+    <p id="desc">{{item?.desc}}</p>
+
+  </div>
+
+</ion-content>

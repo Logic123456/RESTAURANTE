@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ion-header {
+    font-family: 'Poppins', sans-serif;
+    ion-icon {
+        font-size: 30px;
+        position: relative;
+        margin-right: 10px;
+    }
+    #notifications-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 50px;
+        color: #fff;
+        z-index: 111;
+    }
+    #notifications-badge-msg {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right: 95px;
+        color: #fff;
+        z-index: 111;
+    }
+    img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+}
+
+ion-content{
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+
+    .upperBox {
+        width:100%;
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 35% 15% 10%;
+        grid-template-rows: 15% 35% 35% 15%;
+        gap: 5px 5px;
+        grid-template-areas: "image title title menu" "image orderId orderId orderId" "image amount status status" "image edit edit edit";
+        .image {
+            grid-area: image;
+            img {
+                padding: 10px;
+                border-radius: 5px;
+                height: auto;
+                width: 100%;
+            }
+        }
+        .title {
+            grid-area: title;
+            color: blue;
+            h3 {
+                font-size: 16px;
+            }
+        }
+        .menu {
+            grid-area: menu;
+            margin-right: 20px;
+            justify-self: center;
+            h3 {
+                    ion-icon{
+                        margin-right: 10px;
+                        color: red;
+                        
+                    }
+            }
+        }
+        .amount {
+            grid-area: amount;
+            align-self: start;
+            justify-self: start;
+            margin-top: -25px;
+        }
+        .orderId {
+            grid-area: orderId;
+            p {
+                color: gray;
+            }
+        }
+        .status {
+            grid-area: status;
+            P {
+                margin-right: 20px;
+                margin-top: -8px;
+                font-size: 12px;
+                background: #e4f4eb;
+                padding: 5px;
+                text-align: center;
+                color: green;
+            }
+        }
+        .time {
+            grid-area: time;
+            p {
+                margin-top: -30px;
+            }
+        }
+        .edit {
+            grid-area: edit;
+            margin-top: -30px;
+            margin-right:20px;
+            .wrapper{
+                height: auto;
+                width:100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #FFF;
+                border-radius: 22px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+              }
+
+              .wrapper span{
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 600;
+                cursor: pointer;
+                user-select: none;
+              }
+              .wrapper span.num{
+                font-size: 22px;
+                border-right: 2px solid rgba(0,0,0,0.2);
+                border-left: 2px solid rgba(0,0,0,0.2);
+                pointer-events: none;
+                color:red;
+              }
+        }
+    }
+
+    #moreItmes{
+        text-align: center;
+        color:red;
+    }
+    .order_summary{
+        width:100%;
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        height: auto; 
+        padding:10px; 
+        h4{
+            color:red;
+        }
+        p{
+            color:gray;
+            margin-left:20px;
+            margin-right:20px;
+            border-bottom: 1px solid gray;
+            span{
+                float: right;
+                margin-right:10px;
+            }
+        }
+
+        #coupanDiv{
+            background: #e4f4eb;
+            padding :5px;
+            #coupan{
+                font-size: 12px;
+                color:green;
+            }
+        }
+        
+    }
+
+    ion-footer{
+        --background: gray;
+    }
+}

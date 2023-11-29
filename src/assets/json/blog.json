@@ -1,0 +1,39 @@
+{
+    "status": "success",
+    "code": 1,
+    "message": "questions found",
+    "document": {
+        "pageno": 1,
+        "pagesize": 10,
+        "total_count": "10",
+        "records": [
+            {
+                "id": "01",
+                "image": "001.JPG",
+                "title": "Comparison Between Angular 11 Vs Angular 12 Vs Angular 13",
+                "date": "23-08-1980",
+                "category": "Angular",
+                "desc": "Web and Mobile applications have become an integral part of our personal and professional lives. This revolutionary change has led various development companies to look for a better option for building mobile & web apps and Angular is one of them.The incredible features assist designers with making some rich, superior applications without any problem. It is going to stick around for quite some time as it is created by Google. Angular released the latest stable version on the 12th of May, while the current version Angular 11 was launched on November 11. In the analysis of Angular 9 vs 10, we can see their differences in upgradation and deprecation and become a study material for a lot of web app development companies. "
+            },
+
+            {
+                "id": "02",
+                "image": "002.JPG",
+                "title": "Best On Demand Service Apps For Android And IOS In 2021",
+                "date": "23-08-1980",
+                "category": "Ionic",
+                "desc": "Currently the new rush of on-demand service mobile apps for iOS and Android has altered the manner in which organizations offer their products and services. Right now, over long stretches of development, on-demand mobile applications have developed and progressed past our creative mind, managing the cost of live discussions, virtual socializing, and satisfying other desired lifestyle objectives. These staggering mobile applications are meant to target individuals who need quicker and simpler admittance to products and services, establishing an ideal environment of accommodation, quality and trust.  Let's have a look at what these on-demand service apps consist of."
+            },
+
+            {
+                "id": "03",
+                "image": "003.JPG",
+                "title": "Comparison Between PWA Vs Native Apps",
+                "date": "23-08-1980",
+                "category": "PWA App",
+                "desc": "The number of smartphone consumers has been developing consistently and so has online shopping. To satisfy modern clients' needs, ecommerce entrepreneurs need to give a quick, simple, consistent and smooth mobile shopping experience. That is where mobile app development comes into the picture. This has become an integral part of every mobile app development company which helps in delivering a great experience and good results.However, which would it be advisable for you to pick:  a native app or a progressive web app? To settle on an informed decision, you'll initially have to know the features and differences between a progressive web app or a native app. We have written this article to simplify the differences between PWAs and native apps and how organizations can profit from each. "
+            }
+          
+        ]
+    }
+}

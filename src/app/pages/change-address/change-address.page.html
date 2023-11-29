@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Book A Chef</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="chef-box">
+    <div class="upper-box">
+      <div class="img">
+        <img src="../../../assets/001.JPG" />
+      </div>
+      <div class="name-text">
+
+        <h5>Patricia Luke</h5>
+        <p>Houston, Texas</p>
+        <p>
+          <ion-icon name="star"></ion-icon> <span>4.0</span> ( 208 Reviews )
+        </p>
+
+
+      </div>
+      <div class="hour-text">
+        <p class="ion-text-end">1.0KM </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="booking-box">
+    <div class="booking-date">
+      <div class="date">
+        <p>BOOKING DATE</p>
+      </div>
+      <div class="time">
+        <p>TIME</p>
+      </div>
+      <div class="print-date">
+        <p>Today , 23 Aug 1980</p>
+      </div>
+      <div class="print-time">
+        <p>8:00 AM - 12:00PM</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="address-box">
+    <p>Address</p>
+    <div class="change-address">
+        <h3>{{returnDataFromModal?.line1}} <span (click)="changeAddress()">Change</span></h3>
+        <p>4073  Sundown Lane Austin, Texas, 78749</p>   
+    </div>
+
+    <div class="change-address">
+        <ion-item lines="none">
+          <ion-label>Have you food allergies ? <span style="color:gray;">(Optional)</span> </ion-label>
+          <ion-select interface="action-sheet" mode="ios">
+            <ion-select-option value="no">No</ion-select-option>
+            <ion-select-option value="yes">Yes</ion-select-option>
+          </ion-select>
+        </ion-item>
+    </div>
+
+
+
+    <div class="change-address">     
+        <ion-label position="floating" style="color:gray;">Enter Comment Here </ion-label>
+        <ion-textarea></ion-textarea>     
+    </div>
+  </div>
+
+ 
+  <div class="chef-box">
+    <ion-button expand="block" (click)="contiune()">Continue</ion-button>
+  </div>
+
+
+</ion-content>

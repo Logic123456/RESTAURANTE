@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Your Order</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="upperBox" *ngFor="let order of orders; let i = index">
+    <div class="image">
+      <img src="../../../assets/food/{{order.image}}" />
+    </div>
+    <div class="title">
+      <h3>{{order.title}}</h3>
+    </div>
+    <div class="menu">
+      <h3>
+        <ion-icon name="trash-outline" (click)="deleteItem(order.id)"></ion-icon>
+      </h3>
+    </div>
+    <div class="orderId">
+      <p>Est. Time : {{order.time}}</p>
+    </div>
+    <div class="amount">
+      <h3>${{order.amount}}</h3>
+    </div>
+
+    <div class="time">
+
+    </div>
+    <div class="edit">
+      <div class="wrapper">
+        <span class="minus" (click)="remove(i)">-</span>
+        <span class="num">{{order.qty}}</span>
+        <span class="plus" (click)="add(i)">+</span>
+      </div>
+    </div>
+  </div>
+  <p id="moreItmes" (click)="moreItems()">+ Add more items</p>
+  <!-- {{total_amt + (total_amt/10) -1}} -->
+
+  <div class="order_summary">
+    <h4>Order Summory</h4>
+    <p>Sub Total <span> {{total_amt | number : '1.2-2'}}</span></p>
+    <p>GST <span> {{total_amt / 10 | number : '1.2-2'}}</span></p>
+    <p>Coupan Discount <span style="color:red;">- $1.00</span></p>
+    <p>Delivery <span> Free</span></p>
+    <div id="coupanDiv">
+      <p id="coupan">You have saved $10 on the order <span (click)="editCoupan($event)">Edit Coupan</span></p>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar color="dark">
+    <ion-row >
+      <ion-col size="7">
+        <ion-text color="light">
+          <h4>Total : ${{total_amt + (total_amt/10) -1 | number : '1.2-2'}}</h4>
+        </ion-text>
+      </ion-col>
+  
+      <ion-col size="5">
+        <p class="ion-text-right ion-padding-end" (click)="orderDetails()">Continue <ion-icon name="arrow-forward-outline"></ion-icon></p>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

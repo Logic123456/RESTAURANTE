@@ -1,0 +1,71 @@
+<ion-content>
+  <div class="upper">
+    <div class="icon">
+      <ion-icon name="restaurant"></ion-icon>
+    </div>
+    <p id="login">RESTAURANTE</p>
+  </div>
+  <div class="middle">
+    <div class="box">
+      <form #loginForm="ngForm">
+        <p>Por favor registrate para crear tu cuenta</p>
+        <ion-item>
+          <ion-label position="floating">Correo Electronico</ion-label>
+          <ion-input type="email" placeholder="Email" name="email" #email="ngModel" [(ngModel)]="login.email"
+          required email></ion-input>
+          <ion-icon class="ion-align-self-center" slot="end" name="mail"></ion-icon>
+
+        </ion-item>
+        <div *ngIf="email.invalid && email.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px;">Por favor ingresa tu email</h4>
+          </ion-text>
+        </div>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [type]="type ? 'password' : 'text'" placeholder="Password" name="password" #password="ngModel"
+          [(ngModel)]="login.password" required></ion-input>
+          <ion-icon class="ion-align-self-center" name="eye-outline" slot="end"  (click)="changeType()"
+          [name]="type ? 'eye' : 'eye-off'"></ion-icon>
+        </ion-item>
+       
+        <div *ngIf="password.invalid && password.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px;">Por favor ingresa tu contraseña</h4>
+          </ion-text>
+        </div>
+        
+
+        <ion-item>
+          <ion-label position="floating">Confirma tu contraseña</ion-label>
+          <ion-input [type]="type ? 'password' : 'text'" placeholder="Password" name="cpassword" #cpassword="ngModel"
+          [(ngModel)]="login.cpassword" required></ion-input>
+          <ion-icon class="ion-align-self-center" name="eye-outline" slot="end"  (click)="changeType()"
+          [name]="type ? 'eye' : 'eye-off'"></ion-icon>
+        </ion-item>
+       
+        <div *ngIf="cpassword.invalid && cpassword.touched ">
+          <ion-text color="danger text-center">
+            <h4 style="padding-left: 20px; margin-top: 10px;">Por favor ingresa tu contraseña</h4>
+          </ion-text>
+        </div>
+
+      
+        <div class="btn">
+          <ion-button (click)="goToHome()" [disabled]="loginForm.invalid">Login</ion-button>
+        </div>
+      </form>
+    
+     
+     
+      
+    </div>
+  </div>
+  <div class="navigator">
+    <p (click)="goToLogin()">Ya tienes una cuenta ? Inicia sesión ahora</p>
+  </div>
+
+
+
+</ion-content>

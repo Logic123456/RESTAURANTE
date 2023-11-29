@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-title> Add Address</ion-title>
+    <img slot="end" src="../../../assets/001.JPG"  />
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-list>
+  <ion-item>
+    <ion-label position="floating">Line 1</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Line 2</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label>Set Default Address</ion-label>
+    <ion-checkbox slot="end" ></ion-checkbox>
+  </ion-item>
+ </ion-list>
+ 
+
+  <div >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" (click)="setAddress()">Confirm</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
+  </div>
+</ion-content>

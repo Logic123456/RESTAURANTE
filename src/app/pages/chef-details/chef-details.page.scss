@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+ion-content{
+    --background:#fff;
+    font-family: 'Poppins', sans-serif;
+    .img{
+        background: black;
+        overflow: hidden;
+        height:250px;
+        width:100%;
+        position: relative;
+        .top{
+            margin-top:40px;
+            margin-left:20px;
+            margin-right:20px;
+            position: absolute;
+            width: 100%;
+            z-index: 999;
+            .back_div{
+                font-size: 30px;             
+               position: relative;               
+                #end{
+                   float: right;
+                   margin-right:40px;
+                }
+               
+            }
+        }
+
+        .bottom{
+            bottom:10px;
+            left:10px;
+            position: absolute;            
+            right:10px;
+            z-index: 999;
+            height:80px;
+            display: grid;
+            grid-template-columns: 25% 55% 20%;
+            grid-template-rows: 80px auto 80px; 
+            color:#fff;
+            .first{ 
+                justify-self: start;               
+                img{
+                    width:70px;
+                    height:70px;
+                    border-radius: 50px;
+                }
+            }
+
+            .second{
+                justify-self: start;
+                align-self: start;
+                h4{
+                    margin-top:-3px;
+                }
+                p{
+                    margin-top:-10px;
+                }
+            }
+
+            .third{
+                h4{
+                    margin-top:-5px;
+                }
+            }
+        }
+        #myimg{
+            width:100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+    }
+
+    .menu{
+        background-color: #f8f8f8;
+        width:100%;
+        height:auto;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        padding-top: 15px;
+       
+        border-bottom:1px solid #ccc;
+        .menuDiv{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction: column;
+                ion-icon{
+                    font-size: 28px;
+                    color:red;
+                    vertical-align: middle;
+                }
+            
+            
+        }
+       
+        
+    }
+
+    .ch-menu{
+        margin-top:-20px;
+        background-color: #f8f8f8;
+        width:100%;
+        height:200px; 
+        
+        P{
+            margin-left:20px;
+            padding-top:20px;
+            color:red;
+            font-size: 20px;
+        }
+        .wrapper {
+            max-width: 100%;
+            border: none;
+            display: flex;
+            overflow-x: auto;
+           
+            .item {
+                min-width: 100px;
+                height: auto;
+                position: relative;
+                #img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                    border:3px solid #fff;
+                    outline: 1px solid red;
+                }
+                .online {
+                    background: green;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 55px;
+                    right: 10px
+                }
+                p {
+                    margin-top: -10px;
+                    text-align: center;
+                    color:gray;
+                    font-size: 14px;
+                }
+            }
+        }
+        .wrapper::--webkit-scrollbar {
+            width: 0;
+        }
+
+        ion-segment{
+            --background:#f8f8f8;
+            ion-segment-button{
+                --indicator-color:#f15b3a;
+                --color-checked: #f15b3a;
+                font-weight: bold;
+            }
+            
+        }
+    }
+
+    .content{
+        margin-top:30px;
+        .overview{
+            span:nth-of-type(1){
+                color:gray;
+            }
+            span:nth-of-type(2){
+                color:red;
+            }
+            .intro{
+                padding:0px 20px;
+                color:gray;
+                margin-top: -10px;
+                text-align: justify;
+                span{
+                    color: red;
+                }
+            }
+            .hrs{
+                padding-left:10px;
+                margin-top:-20px;
+                span{
+                    color:gray;
+                }
+                ion-icon{
+                    color:rgb(145, 231, 16)
+                }
+            }
+
+            .address{
+                padding-left:10px;
+                padding-right:10px;
+                padding-bottom:30px;
+                ion-label{
+                    color:gray;
+                }
+                h3{
+                    color:red;
+                    span{
+                        float: right;
+                        margin-right:10px;
+                    }
+                }
+                .lower-box{
+                    .wrapper{
+                        max-width: 100%;
+                        border:none;
+                        display: flex;
+                        overflow-x: auto;
+        
+                        #img{
+                            width:100%;
+                            height:110px;
+                            border-radius: 10px;
+                        }
+        
+                        .item{
+                            min-width: 110px;
+                            height:110px;
+                            line-height:110px;                    
+                            margin-right:10px;
+                        }
+                    }
+        
+                    .wrapper::--webkit-scrollbar{
+                        width:0;
+                    }
+                }
+
+                ion-button{
+                    margin-top:25px;
+                    --background: #f15b3a;
+                    height:50px;
+                }
+            }
+        }
+
+        .services{
+            margin-top:50px;
+            .lower-box{
+                .wrapper{
+                    max-width: 100%;
+                    border:none;
+                    display: flex;
+                    overflow-x: auto;
+    
+                    #img{
+                        width:100%;
+                        height:110px;
+                        border-radius: 10px;
+                    }
+    
+                    .item{
+                        min-width: 110px;
+                        height:110px;
+                        line-height:110px;                    
+                        margin-right:10px;
+                    }
+                }
+    
+                .wrapper::--webkit-scrollbar{
+                    width:0;
+                }
+            } 
+
+            .innerService{
+                .upperBox1 {
+                    background-color: #fff;
+                    margin-top: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: 40% 35% 15% 10%;
+                    grid-template-rows: 15% 35% 35% 15%;
+                    gap: 5px 5px;
+                    grid-template-areas: "image title title menu" "image orderId orderId orderId" "image amount status status" "image time edit edit";
+                    .image {
+                        grid-area: image;
+                        img {
+                            padding: 10px;
+                            border-radius: 5px;
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                    .title {
+                        grid-area: title;
+                        color: #f15b3a;
+                        h3 {
+                            font-size: 26px;
+                        }
+                    }
+                    .menu {
+                        grid-area: menu;
+                        margin-right: 10px;
+                        justify-self: center;
+                    }
+                    .amount {
+                        grid-area: amount;
+                        align-self: start;
+                        justify-self: start;
+                        margin-top: -25px;
+                    }
+                    .orderId {
+                        grid-area: orderId;
+                        p {
+                            color: gray;
+                        }
+                    }
+                    .status {
+                        grid-area: status;
+                        P {
+                            margin-right: 20px;
+                            margin-top: -8px;
+                            font-size: 12px;
+                            background: #e4f4eb;
+                            padding: 5px;
+                            text-align: center;
+                            color: green;
+                        }
+                    }
+                    .time {
+                        grid-area: time;
+                        p {
+                            margin-top: -30px;
+                        }
+                    }
+                    .edit {
+                        grid-area: edit;
+                        margin-top: -50px;
+                        .btn {
+                            font-size: 18px;
+                            background: #f15b3a;
+                            padding: 10px 20px;
+                            text-align: center;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reviews{
+            padding-bottom: 10px;
+           
+            .writeReview{
+                padding:10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                color:gray;   
+                }
+            }
+
+            .imgReview{
+                padding:0px 10px;
+                border-bottom: 1px solid #ccc;
+                display: grid; 
+                grid-auto-columns: 1fr; 
+                grid-template-columns: 20% 50% 30%; 
+                grid-template-rows: 1fr 1fr; 
+                gap: 5px 5px; 
+                align-items: center;
+                grid-template-areas: 
+                    "imgs inputbox inputbox"
+                    "empty empty btn";
+                    
+                    
+                    .inputbox { 
+                        grid-area: inputbox;
+                        padding-right:10px;
+                        input{
+                            width: 100%;
+                            border:none;
+                            background:#f0f0f0;
+                            height:40px;
+                            border-radius: 20px;
+                            padding-left:20px;
+                        }
+                        
+                     }
+                    .imgs { 
+                        grid-area: imgs;
+                        img{
+                            width:70px;
+                            height:70px;
+                            border-radius: 50%;
+                        } 
+                    }
+                    .empty { grid-area: empty; }
+                    .btn { grid-area: btn; }
+            }
+
+            .comments{
+                padding:10px;
+                ion-label{
+                    color:gray;
+                }
+                .commentBlock{
+                    padding-top:10px;
+                    display: grid; 
+                    justify-items: start;
+                    grid-auto-columns: 1fr; 
+                    grid-template-columns: 18.8% 57.2% 24%; 
+                    grid-template-rows: 14% 13.7% 72.3%; 
+                    gap: 5px 5px; 
+                    grid-template-areas: 
+                        "cimg cName cTime"
+                        "cimg star star"
+                        "commentLine commentLine commentLine"; 
+
+                        .cName { 
+                            grid-area: cName;
+                            justify-self: start;
+                            align-self: start;
+                            p{
+                                color:red;
+                                font-size: 20px;
+                                margin-top:1px;
+                            }
+                         }
+                        .cTime { grid-area: cTime;color:gray; }
+                        .cimg { 
+                            grid-area: cimg;
+                            img{
+                                width:70px;
+                                height:70px;
+                                border-radius: 50%;
+                            } 
+                         }
+                        .star { grid-area: star; }
+                        .commentLine { grid-area: commentLine; }
+                }
+            }
+        }
+    }
+}

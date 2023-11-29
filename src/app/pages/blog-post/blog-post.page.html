@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button color="light" defaultHref="blog"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Blog</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="blog" >
+    <div class="img">
+      <img src="../../../assets/food/002.JPG" />
+    </div>
+    <div class="title">
+      <h3>Comparison Between Angular 11 Vs Angular 12 Vs Angular 13</h3>
+      <p> Ionic<span>Date : 23-08-1980</span></p>
+      <p id="desc">"Web and Mobile applications have become an integral part of our personal and professional lives. This revolutionary change has led various development companies to look for a better option for building mobile & web apps and Angular is one of them.The incredible features assist designers with making some rich, superior applications without any problem. It is going to stick around for quite some time as it is created by Google. Angular released the latest stable version on the 12th of May, while the current version Angular 11 was launched on November 11. In the analysis of Angular 9 vs 10, we can see their differences in upgradation and deprecation and become a study material for a lot of web app development companies. "
+      </p>
+    </div>
+  </div>
+
+ 
+  
+
+</ion-content>

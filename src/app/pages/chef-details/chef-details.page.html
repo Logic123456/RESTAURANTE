@@ -1,0 +1,206 @@
+<ion-content>
+  <div class="img">
+    <div class="top" (click)="home()">
+      <div class="back_div">
+        <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+        <ion-icon name="star-outline" color="light" id="end"></ion-icon>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="first">
+        <img src="../../../assets/001.JPG" />
+      </div>
+      <div class="second">
+        <h4>Patricia Luke</h4>
+        <p>Houston Texas</p>
+        <p>3.0 <ion-icon name="star-outline" color="light" id="end"></ion-icon> ( 125 Reviews )</p>
+      </div>
+      <div class="third">
+        <h4>$20/Hr</h4>
+        <ion-button size="small" color="success">OPEN</ion-button>
+      </div>
+    </div>
+    <img id="myimg" src="../../../assets/food/001.JPG" />
+  </div>
+
+  <div claSS="menu">
+    <div class="menuDiv">
+      <ion-icon name="chatbubble-outline"></ion-icon>
+      <p>Message</p>
+    </div>
+    <div class="menuDiv">
+      <ion-icon name="call"></ion-icon>
+      <p>Call</p>
+    </div>
+    <div class="menuDiv">
+      <ion-icon name="map-outline"></ion-icon>
+      <p>Direction</p>
+    </div>
+    <div class="menuDiv">
+      <ion-icon name="share-outline"></ion-icon>
+      <p>Share</p>
+    </div>
+  </div>
+
+  <div class="ch-menu">
+    <P>Chef Menu</P>
+    <div class="wrapper">
+      <div class="item" *ngFor="let item of user">
+        <img id="img" src="../../../assets/food/{{item.image}}" />
+        <p>{{item.title | slice:0:8 }}</p>
+      </div>
+    </div>
+    <ion-segment [value]="segId" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="overview">
+        <ion-label>OverView</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="services">
+        <ion-label>Services</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="reviews">
+        <ion-label>Reviews</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+  <div class="content">
+    <div *ngIf="segId == 'overview'" class="overview">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <p>About</p>
+          </ion-col>
+          <ion-col size="7">
+            <p class="ion-text-end"><span>Avarage Price : </span><span>$20/</span>Hour</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr>
+      <p class="intro">Hi I am Patricia Luke I've always had a passion for cooking. In the day im a Chef for a 5 star
+        resturant. Afterwards I use Open Kitchen to share my passions to the world.<span> Read more</span> </p>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <p>Hours Available</p>
+          </ion-col>
+          <ion-col size="7">
+            <p class="ion-text-end"><span> </span><span>View Details</span></p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr>
+
+      <div class="hrs">
+        <ion-label>
+          <ion-icon name="ellipse"></ion-icon><span> Monday-Friday : </span>4:00pm - 8:00pm
+        </ion-label>
+        <br>
+        <ion-label>
+          <ion-icon name="ellipse"></ion-icon><span> Saturday - Sunday : </span>7:00am - 8:00pm
+        </ion-label>
+      </div>
+      <br>
+      <div class="address">
+        <h3>Address</h3>
+
+        <ion-label>16704 Bishop Knoll, Houston, Texas 77084, USA</ion-label>
+
+        <h3>Photos <span> View All</span></h3>
+
+        <div class="lower-box">
+          <div class="wrapper">
+            <div class="item" *ngFor="let item of dish">
+              <img id="img" src="../../../assets/food/{{item.image}}" />
+            </div>
+          </div>
+        </div>
+        <ion-button expand="block" (click)="goToEvent()">Book a Chef</ion-button>
+
+      </div>
+    </div>
+
+
+    <div *ngIf="segId == 'services'" class="services">
+      <div class="lower-box">
+        <div class="wrapper">
+          <div class="item" *ngFor="let item of dish">
+            <img id="img" src="../../../assets/food/{{item.image}}" />
+          </div>
+        </div>
+      </div>
+
+      <div *ngFor="let order of orders" class="innerService">
+        <p id="date">{{order.date}}</p>
+        <div class="upperBox1" *ngFor="let Singleorder of order.order">
+          <div class="image">
+            <img src="../../../assets/food/{{Singleorder.image}}" />
+          </div>
+          <div class="title">
+            <h3>{{Singleorder.title}}</h3>
+          </div>
+          <div class="menu">
+            <h3>
+              <ion-icon name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon>
+            </h3>
+          </div>
+          <div class="orderId">
+
+          </div>
+          <div class="amount">
+            <h3>${{Singleorder.amount}}</h3>
+          </div>
+          <div class="status">
+
+          </div>
+          <div class="time">
+            <p>Est. Time : {{Singleorder.time}}</p>
+          </div>
+          <div class="edit">
+            <button class="btn" type="submit" (click)="presentActionSheet()"> Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="segId == 'reviews'" class="reviews">
+      <div class="writeReview">
+        <p>Write Your Reiviews </p>
+        <ngx-stars [color]="'#ffa015'" [size]="2"></ngx-stars>
+      </div>
+
+      <div class="imgReview">
+        <div class="imgs">
+          <img src="../../../assets/001.JPG" />
+        </div>
+        <div class="inputbox">
+          <input type="text" placeholder="Leave Your Experience" />
+        </div>
+        <div class="empty"></div>
+        <div class="btn">
+          <ion-button color="danger">POST</ion-button>
+        </div>
+      </div>
+
+      <div class="comments">
+        <ion-label>All Reviews (28)</ion-label>
+
+        <div class="commentBlock">
+          <div class="cimg">
+            <img src="../../../assets/002.JPG" />
+          </div>
+          <div class="cName">
+            <p>Kevin Doyle</p>
+            <ngx-stars [color]="'#ffa015'" [size]="1"></ngx-stars>
+          </div>
+          <div class="cTime"> 2 days ago</div>
+          <div class="star"></div>
+          <div class="commentLine"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

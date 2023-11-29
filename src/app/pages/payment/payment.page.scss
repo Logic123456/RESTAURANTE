@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ion-header{
+    font-family: 'Poppins', sans-serif;
+    ion-icon{
+        font-size:30px;
+        position: relative; 
+        margin-right:10px; 
+    }
+    #notifications-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:50px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+
+    #notifications-badge-msg{
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:95px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+    img{
+        width: 35px;
+        height:35px;
+        border-radius: 50%;
+        margin-right:10px;
+    }
+}
+
+ion-content{
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+
+   
+    #date{
+        padding-left:20px;
+    }
+
+
+  
+
+    .upperBox{
+      background-color: #fff;
+      margin-top:10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      height:aut;
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 34% 33% 33%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "img title price"
+          "img transId time"
+          "img bank status";
+
+      
+      .img { 
+          grid-area: img;
+          justify-self:center;
+         align-self:center; 
+         img{
+             width:100%;
+             padding:10px;
+             border-radius: 20px;
+         }
+        }
+      
+      .title { grid-area: title; }
+      
+      .price { 
+          grid-area: price;
+          justify-self: end;
+          color:#ccc;
+          align-self:start; 
+          margin-right:20px; 
+        }
+      
+      .transId { 
+          grid-area: transId;
+          color:#ccc;
+          margin-top:-10px; 
+        }
+      
+      .time { 
+          grid-area: time;
+          justify-self: end;
+          color:#ccc;
+          align-self:start;
+          margin-right:20px; 
+          margin-top:-10px; 
+        }
+      
+      .bank { 
+          grid-area: bank;
+          font-size: 14px;
+          color:gray;
+        }
+      
+      .status { 
+          grid-area: status;
+          justify-self: end;
+          
+          align-self:start;
+          margin-right:20px; 
+          font-weight: bold;
+        }
+        
+      
+   
+      
+        
+      
+    }
+
+
+}

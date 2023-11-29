@@ -1,0 +1,66 @@
+
+<ion-content class="">
+  <swiper #swiper
+  [effect]="'cube'" 
+  [grabCursor]="true" 
+  [cubeEffect]="{
+    shadow: false
+  }" 
+  [pagination]="true" 
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+  class="mySwiper"
+  >
+  
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef2.png" />  
+      <div class="slider-text" >
+        <h2>Chefs personales cerca de ti</h2>
+
+        <p>
+          ¿Cómo puedo conectarme con los mejores chefs personales?
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)= "skip()">OMITIR</ion-button>
+        <ion-button color="primary" fill="clear" (click)= "next()">SIGUIENTE</ion-button> 
+        
+      </div>   
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef3.jpg" />
+
+      <div class="slider-text">
+        <h2>Elige tu comida</h2>
+
+        <p>
+          Ofrecemos clases personalizadas gratuitas de chefs personales cerca de usted, estas listo?.
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="pre()">OMITIR</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">SIGUIENTE</ion-button>
+      </div>   
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../assets/chef4.png" />
+
+      <div class="slider-text">
+        <h2>
+          Encuentra o reserva a tu chef</h2>
+        <p>
+          Se te presentará una lista de profesionales calificados: reseñas, precio, ¡todo está incluido!
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="pre()">OMITIR</ion-button>
+        <ion-button color="primary" fill="clear" (click)="login()">IR A LOGIARME</ion-button>
+      </div> 
+    </ng-template>
+    
+  </swiper>
+
+</ion-content>

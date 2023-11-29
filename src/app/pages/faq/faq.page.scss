@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+ion-header{
+    font-family: 'Poppins', sans-serif;
+    ion-icon{
+        font-size:30px;
+        position: relative; 
+        margin-right:10px; 
+    }
+    #notifications-badge {
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:50px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+
+    #notifications-badge-msg{
+        background-color: rgb(67, 7, 233);
+        position: absolute;
+        top: 5px;
+        right:95px; 
+        color:#fff;                 
+        z-index: 111;
+    }
+    img{
+        width: 35px;
+        height:35px;
+        border-radius: 50%;
+        margin-right:10px;
+    }
+}
+
+ion-content{
+    --background:#f0f0f2;
+    font-family: 'Poppins', sans-serif;
+
+    $midnight: #2c3e50;
+    $clouds: #ecf0f1;
+
+    .upperBox{
+      background-color: #fff;
+      margin-top:10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      height:auto;
+      .heading{
+        text-align: center;
+        padding-top:10px;
+        
+        color:orange;
+      }
+  
+      .subheading{
+        text-align: center;
+        color:gray;
+        padding-bottom:10px;
+      }
+      .faq{
+        padding-left: 20px;
+        padding-bottom: 20px;
+      }
+
+      .msg{
+        padding:20px;
+      }
+      ion-textarea{
+        border: 1px solid #ccc;
+        --padding-bottom:10px;
+        --padding-start:10px;
+        --padding-end:10px;
+        --padding-top:10px;
+      }
+      .btn{
+       padding:10px;
+      }
+    }
+
+    
+// General
+
+h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+}
+h2 {
+  margin: 0 0 .5em;
+  font-weight: normal;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+// Layout
+.row {
+  display:flex;
+  .col {
+    flex:1;
+    
+  }
+}
+/* Accordion styles */
+.tabs {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.tab {
+  width: 100%;
+  color: $midnight;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: #fff;
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: gray;
+    background: white;
+    transition: all .35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #fff;
+    cursor: pointer;
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background:#fff;
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+
+
+}

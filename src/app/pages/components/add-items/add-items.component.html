@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <!-- <ion-buttons slot="start" class="menu_btn">
+          <ion-back-button color="light" defaultHref="/search-chef"></ion-back-button>
+      </ion-buttons> -->
+    <ion-title>Add Items</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="upperBox" *ngFor="let order of orders; let i = index">
+    <div class="image">
+      <img src="../../../assets/food/{{order.image}}" />
+    </div>
+    <div class="title">
+      <h3>{{order.title}}</h3>
+    </div>
+    <div class="menu">
+      <h3>
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </h3>
+    </div>
+    <div class="orderId">
+      <p>Est. Time : {{order.time}}</p>
+    </div>
+    <div class="amount">
+      <h3>${{order.amount}}</h3>
+    </div>
+
+    <div class="time">
+
+    </div>
+    <div class="edit">
+      <div class="wrapper">
+        <span class="minus" (click)="remove(i)">-</span>
+        <span class="num">{{order.qty}}</span>
+        <span class="plus" (click)="add(i)">+</span>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

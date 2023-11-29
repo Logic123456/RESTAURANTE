@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="upper">
+    <div class="icon">
+      <ion-icon name="restaurant"></ion-icon>
+    </div>
+    <p id="login">HOTEL MANAGMENT APP</p>
+  </div>
+  <div class="middle">
+    <div class="box">     
+      <h3 > Sign In Using Face ID</h3>
+      <p id="media"> Look directly into the camera, fill your face in the circle</p>
+      <div class="fingerPrints">
+        <div class="fingerIcon">
+          <img src="../../../assets/001.JPG" />
+        </div>
+        <p id="media"> Scanning...</p>
+      </div>
+      <div class="socialMedia">
+        <ion-icon name="logo-facebook" (click)="facebookLogin()"></ion-icon>
+        <ion-icon name="logo-twitter" (click)="twitterLogin()"></ion-icon>
+        <ion-icon name="logo-google" (click)="gmailLogin()"></ion-icon>
+      </div>
+      
+      <div class="faceLogin" (click)="touchLogin()">
+        <ion-icon name="eye-outline"></ion-icon>
+        <p> Sign In With Touch ID</p>
+      </div>
+    </div>
+  </div>
+  <div class="navigator">
+    <p (click)="emailLogin()">Login With Email</p>
+  </div>
+
+
+
+</ion-content>

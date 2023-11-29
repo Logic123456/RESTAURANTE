@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="upper">
+    <div class="icon">
+      <ion-icon name="restaurant"></ion-icon>
+    </div>
+    <p id="login">RESTAURANTE</p>
+  </div>
+  <div class="middle">
+    <div class="box">
+      <form #loginForm="ngForm">
+        <h3>Phone Verification</h3>
+        <hr>
+        <p>Enter your 4 digit code here.</p>
+        <h3 *ngIf="msg !== ''" id="msg">{{msg}}</h3>
+        <div class="code">
+          <input type="tel" required #txt1 maxlength="1" (keyup)="move($event, '', txt1 , txt2)" name="key1" #key1="ngModel" [(ngModel)]="login.key1"/>
+          <input type="tel" required #txt2 maxlength="1" (keyup)="move($event, txt1, txt2 , txt3)" name="key2" #key2="ngModel" [(ngModel)]="login.key2"/>
+          <input type="tel" required #txt3 maxlength="1" (keyup)="move($event, txt2, txt3 , txt4)" name="key3" #key3="ngModel" [(ngModel)]="login.key3"/>
+          <input type="tel" required #txt4 maxlength="1" (keyup)="move($event, txt3, txt4 , '') " name="key4" #key4="ngModel" [(ngModel)]="login.key4"/>
+        </div>
+
+
+        <div class="btn">
+          <ion-button (click)="veryfiotp()" [disabled]="loginForm.invalid">Verify </ion-button>
+        </div>
+      </form>
+
+
+
+
+    </div>
+  </div>
+  <div class="navigator">
+    <p (click)="resend()">Didn't receive code ? <span style="color:black">Resend Code .</span></p>
+  </div>
+
+
+
+</ion-content>

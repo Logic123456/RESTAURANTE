@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar color='danger'>
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-menu-button color="light" defaultHref="home1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista de Chefs</ion-title>
+    <ion-icon name="notifications" slot="end" (click)="notificationModal($event)"></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">2</ion-badge>
+    <ion-icon name="cart" slot="end"></ion-icon>
+    <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+    <img slot="end" src="../../../assets/001.JPG" (click)="presentModal($event)"/>
+  </ion-toolbar>
+
+  <ion-toolbar color='danger'>
+    <ion-searchbar placeholder="Buscar chef o comida"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="chef-box">
+    <div class="upper-box">
+      <div class="img">
+        <img src="../../../assets/001.JPG" />
+      </div>
+      <div class="name-text">
+
+        <h5>Patricia Luke</h5>
+        <p>Houston, Texas</p>
+        <p><ion-icon name="star"></ion-icon> <span>4.0</span> ( 208 Reviews )</p>
+        <p>08:30 AM - 09:00 PM</p>
+
+
+      </div>
+
+      <div class="hour-text">
+        <p class="ion-text-end">1.0KM <ion-icon color="danger"  name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon></p>
+        <h5 class="ion-text-end">$20/Hour </h5>
+        <ion-button color="danger" (click)="goToEvent()">Llamar</ion-button>
+      </div>
+      
+    </div>
+
+    <div class="lower-box">
+      <div class="wrapper">
+        <div class="item" *ngFor="let item of dish">
+          <img id="img" src="../../../assets/food/{{item.image}}" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="chef-box">
+    <div class="upper-box">
+      <div class="img">
+        <img src="../../../assets/002.JPG" />
+      </div>
+      <div class="name-text">
+
+        <h5>Tim Brown</h5>
+        <p>Dallas, Texas</p>
+        <p><ion-icon name="star"></ion-icon> <span>4.0</span> ( 208 Reviews )</p>
+        <p>08:00 AM - 07:00 PM</p>
+
+
+      </div>
+      <div class="hour-text">        
+        <p class="ion-text-end">3.0KM <ion-icon color="danger"  name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon></p>
+        <h5 class="ion-text-end">$15/Guest</h5>
+        <ion-button color="danger">Llamar</ion-button>
+      </div>
+    </div>
+
+    <div class="lower-box">
+      <div class="wrapper">
+        <div class="item" *ngFor="let item of dish">
+          <img id="img" src="../../../assets/food/{{item.image}}" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="chef-box">
+    <div class="upper-box">
+      <div class="img">
+        <img src="../../../assets/003.JPG" />
+      </div>
+      <div class="name-text">
+
+        <h5>Jon Doe</h5>
+        <p>Nanded, India</p>
+        <p><ion-icon name="star"></ion-icon> <span>3.0</span> ( 208 Reviews )</p>
+        <p>08:00 AM - 07:00 PM</p>
+
+
+      </div>
+      <div class="hour-text">        
+        <p class="ion-text-end">3.0KM <ion-icon color="danger"  name="ellipsis-vertical-outline" (click)="presentPopover($event)"></ion-icon></p>
+        <h5 class="ion-text-end">$10/Hour</h5>
+        <ion-button color="danger">Llamar</ion-button>
+      </div>
+    </div>
+
+    <div class="lower-box">
+      <div class="wrapper">
+        <div class="item" *ngFor="let item of dish">
+          <img id="img" src="../../../assets/food/{{item.image}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon md="share-social" ></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button style="--background:#3b5998; --color:#fff;">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button style="--background:#00acee; --color:#fff;">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button style="--background:#FF0000; --color:#fff;">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button style="--background:#128C7E; --color:#fff;">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-fab-button>
+      
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
